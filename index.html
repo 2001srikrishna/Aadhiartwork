@@ -80,6 +80,39 @@
         padding: 20px;
         text-align: center;
       }
+
+      /* Add some additional styling for the sections */
+      section {
+        display: none;
+      }
+
+      #home {
+        display: block;
+      }
+
+      #about {
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      #projects {
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      #contact {
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
     </style>
   </head>
   <body>
@@ -87,6 +120,7 @@
       <h1>My Portfolio</h1>
       <nav>
         <ul>
+          <li><a href="#" onclick="showSection('home')">Home</a></li>
           <li><a href="#" onclick="showSection('about')">About</a></li>
           <li><a href="#" onclick="showSection('projects')">Projects</a></li>
           <li><a href="#" onclick="showSection('contact')">Contact</a></li>
@@ -94,80 +128,42 @@
       </nav>
     </header>
     <main>
-      <section id="about" style="display: none">
-        <h2>About Me</h2>
-        <p>
-          Hello! My name is John Doe and I am a web developer. I have a passion for creating beautiful and functional websites and I am constantly learning and improving my skills. In my free time, I enjoy playing guitar and hiking in the mountains.
-        </p>
+      <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <p>This is the home
+page of my portfolio site. From here, you can learn more about me and my work by navigating to the About, Projects, and Contact sections using the menu at the top of the page.</p>
       </section>
-      <section id="projects" style="display: none">
-        <h2>My Projects</h2>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm a software developer with a passion for building innovative and user-friendly applications. I have experience in a variety of programming languages and technologies, including Java, Python, and JavaScript. In my free time, I enjoy tinkering with new technologies and working on personal projects.</p>
+        <h3>Skills</h3>
         <ul>
-          <li>
-            <h3>Project 1</h3>
-            <p>
-              This is a project that I completed for a local business. The goal of the project was to create a modern and responsive website that would showcase the company's products
-          </p>
-          <p>
-            Visit the website: <a href="#">www.project1.com</a>
-          </p>
-          <img src="project1.jpg" alt="Screenshot of Project 1">
-          <p>
-            Technologies used: HTML, CSS, JavaScript
-          </p>
-        </li>
-        <li>
-          <h3>Project 2</h3>
-          <p>
-            This is a project that I completed for a personal blog. The goal of the project was to create a visually appealing and easy-to-navigate website that would allow the blogger to share their thoughts and experiences with their audience. I used WordPress to build the website and customized the design using CSS.
-          </p>
-          <p>
-            Visit the website: <a href="#">www.project2.com</a>
-          </p>
-          <img src="project2.jpg" alt="Screenshot of Project 2">
-          <p>
-            Technologies used: WordPress, CSS
-          </p>
-        </li>
-      </ul>
-    </section>
-    <section id="contact" style="display: none">
-      <h2>Contact Me</h2>
-      <p>
-        If you are interested in working with me or have any questions, please don't hesitate to contact me. I would love to hear from you!
-      </p>
-      <p>
-        Email: <a href="mailto:your@email.com">your@email.com</a><br>
-        Phone: 555-555-5555
-      </p>
-      <p>
-        You can also find me on the following social media platforms:
-      </p>
-      <ul>
-        <li>
-          <a href="#"><img src="twitter.png" alt="Twitter logo"></a>
-          <a href="#"><img src="linkedin.png" alt="LinkedIn logo"></a>
-          <a href="#"><img src="github.png" alt="GitHub logo"></a>
-        </li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p>Copyright 2021 My Portfolio</p>
-  </footer>
-  <script>
-    function showSection(id) {
-      // Get all sections
-      var sections = document.getElementsByTagName('section');
-
-      // Hide all sections
-      for (var i = 0; i < sections.length; i++) {
-        sections[i].style.display = 'none';
-      }
-
-      // Show the selected section
-      document.getElementById(id).style.display = 'block';
-    }
-  </script>
-</body>
+          <li>Java</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>HTML/CSS</li>
+          <li>SQL</li>
+          <li>Agile development</li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <h3>Personal Project: Recipe Manager</h3>
+        <p>A web application that allows users to create and manage their own digital recipe book. Features include the ability to add and delete recipes, as well as search and filter by various criteria such as ingredient or cuisine type.</p>
+        <h3>Professional Project: E-commerce Platform</h3>
+        <p>A comprehensive e-commerce platform built for a large online retailer. The platform includes features such as a customizable storefront, inventory management, and a secure checkout process. Technologies used include Java, Spring, and MySQL.</p>
+      </section>
+      <section id="contact">
+        <h2>Contact Me</h2>
+<p>If you'd like to get in touch, you can reach me at the following email address:</p>
+        <p>hello@myportfolio.com</p>
+        <p>You can also connect with me on LinkedIn:</p>
+        <p><a href="https://www.linkedin.com/in/myportfolio">https://www.linkedin.com/in/myportfolio</a></p>
+      </section>
+    </main>
+    <footer>
+      Copyright &copy; 2021 My Portfolio
+    </footer>
+  </body>
 </html>
+
